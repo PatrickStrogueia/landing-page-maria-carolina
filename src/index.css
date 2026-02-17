@@ -15,7 +15,25 @@
     --brand-surface: #1E293B;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-brand-bg text-brand-text transition-colors duration-300;
+    @apply antialiased bg-brand-bg text-brand-text transition-colors duration-300;
+  }
+
+  ::selection {
+    @apply bg-brand-500 text-white;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 dark:bg-dark-surface/70 backdrop-blur-lg border border-white/20 dark:border-white/5;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-600 to-brand-400 dark:from-brand-400 dark:to-brand-200;
   }
 }
