@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-bg: #F9F7F5;
+    --brand-text: #333333;
+    --brand-surface: #FFFFFF;
+  }
+
+  .dark {
+    --brand-bg: #0F172A;
+    --brand-text: #F1F5F9;
+    --brand-surface: #1E293B;
+  }
+
+  body {
+    @apply bg-brand-bg text-brand-text transition-colors duration-300;
+  }
+}
